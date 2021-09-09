@@ -1,0 +1,66 @@
+
+/********************************** LOGIN ******************************************/
+body{
+    background-color: #d53e3d;
+}
+    
+    .main-section{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+}
+
+.modal-content{
+    background-color: #ffffff;
+    opacity: .95;
+    padding: 100 20;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+}
+
+.titulo-login{
+    color: #171717;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.subtitulo-login{
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.user-img {
+    margin-top: -50px;
+    margin-bottom: 15px;
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 30px;
+    font-size: 22px;
+    padding-top: 4px;
+    color: rgb(42, 42, 42);
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+}
+
+.form-group#contrasena-group::before{
+    content: "\f023";
+}
+
+button{
+    width: 80%;
+    margin: 20px 0px 20px 0px;
+}
+
+/* *********************************************************************************/

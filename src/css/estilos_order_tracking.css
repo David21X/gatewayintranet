@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.titulo{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.sinformato{
+    text-decoration: none;
+    
+}
+
+tfoot {
+    display: table-header-group;
+}
+.smfrsucces{
+
+    color: #108601;
+  }
+  .smfrwarning{
+  
+    color: #ff9900;
+  }
+  .smfrdanger{
+  
+    color: #ff0000;
+  }
+
+/* ************************************** SE INICIA ********************************** */
+@media (min-width: 768px) {
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 100%;
+        
+    }
+    .flex-container div{
+        color: #fff ;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px){
+    .item1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.espacio {
+    padding-right: 150px;
+}
+
+.espaciobjetos{
+    padding-right: 5px;
+}
+
+.vacio{
+    background-color: #d53d3d1a;
+    
+}
+.completo{
+    
+}
+
+
+
+
+.item1{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.item2{
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    
+}
+
+.item2 h1{
+    color: black;
+    font-size: 150px;
+    line-height: 60pt;
+    text-indent: -200px;
+    padding-top: 100px;
+}
+.item2 span{
+    color: #D53E3D;
+    font-size: 100px;
+    
+}
+
+.boton-inicia {
+    width: 300px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #D53E3D;
+}
+
+.item3{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end; 
+    align-items: flex-end;   
+}
+
+
+
+.elemento {
+    margin-bottom: 5px;
+    background-color: #ebebeb;
+    border: none;
+}
+
+.fecha {
+    width: 40%;
+    background-color: #D53E3D;
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.fecha2 {
+    width: 59%;
+    padding: 3px;
+    
+    
+}
+
+.razon{
+    width: 40%;
+    background-color: #D53E3D;
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+}
+
+.razon2{
+    width: 59%;
+    padding: 3px;
+    
+}
+
+.comentarios{
+    width: 100%;
+    background-color: #D53E3D;
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+}
+
+.comentarios2{
+    width: 100%;
+    
+}
+
+
+/* table.dataTable{
+    table-layout: fixed;
+    width: 100vh;
+} */
+
+table.dataTable thead {
+    background-color: #D53E3D;
+    color: #fff;
+    text-align: center;
+}
+
+
+table.dataTable {
+    text-align: center;
+}
+
+
+
+/* Estilo de las tablas */
+
+
+
+
+

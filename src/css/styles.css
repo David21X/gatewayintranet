@@ -1,0 +1,33 @@
+
+.nav-red {
+    background-color: #d53e3d;
+}
+
+.nav-red a{
+    color: white;
+    text-transform: capitalize;
+}
+
+.img-margin{
+    margin-bottom: 20px;
+}
+
+.cuerpo-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpo-div h3{
+    color: #d53e3d;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+
+.cartas-div{
+    width: 90%;
+}
+
+
