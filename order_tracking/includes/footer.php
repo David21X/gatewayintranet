@@ -56,9 +56,68 @@
     <!-- Page level plugins -->
     <script src="../../src/vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="../../src/js/demo/chart-area-demo.js"></script>
-    <script src="../../src/js/demo/chart-pie-demo.js"></script>
+    <script>
+
+        cargarDatosGraficosBar();
+            function cargarDatosGraficosBar() {
+                $.ajax({
+                    url:'../../order_tracking/graficas/controlador_grafico.php',
+                    type:'POST'
+                }).done(function(resp){
+                    var titulo   = [];
+                    var cantidad = [];
+                    var colores  = [];
+                    var data = JSON.parse(resp);
+                    for(var i=0; i<data.length; i++){
+                        titulo.push(data[i][2]);
+                        cantidad.push(data[i][32]);
+                        colores.push(colorRGB());
+                    }
+                    var ctx = document.getElementById('myChart');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: titulo,
+                            datasets: [{
+                                label: '# of Votes',
+                                data: cantidad,
+                                backgroundColor: colores,
+                                borderColor: colores,
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                })
+            }
+
+            function generarNumero(numero){
+                return (Math.random()*numero).toFixed(0);
+            }
+
+            function colorRGB(){
+                var coolor = "("+generarNumero(255)+"," + generarNumero(255) + "," + generarNumero(255) +")";
+                return "rgb" + coolor;
+            }
+
+            insertAnio();
+            function insertAnio(){
+                var mifecha = new Date();
+                var anio = mifecha.getFullYear();
+                var cadena = "";
+                for(var i=2015; i<anio+1; i++){
+                    cadena +="<option value="+i+">"+i+"</option>";
+                }
+                $("#select_finicio").html(cadena);
+                $("#select_ffin").html(cadena);
+            }
+    </script>
 
 </body>
 
