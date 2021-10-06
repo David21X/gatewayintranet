@@ -9,7 +9,7 @@
         }
 
 		function traerDatosGraficosBar(){
-			$sql = "CALL PR_DATOSGFOCOM ";	
+			$sql = "CALL SUMA_CANTIDAD_P";	
 			$arreglo = array();
 			if ($consulta = $this->conexion->conexion->query($sql)) {
 

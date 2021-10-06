@@ -64,13 +64,13 @@
                     url:'../../order_tracking/graficas/controlador_grafico.php',
                     type:'POST'
                 }).done(function(resp){
-                    var titulo   = [];
+                    var titulo   = ['PD','TW','NW','NW1'];
                     var cantidad = [];
                     var colores  = [];
                     var data = JSON.parse(resp);
                     for(var i=0; i<data.length; i++){
-                        titulo.push(data[i][2]);
-                        cantidad.push(data[i][32]);
+                        // titulo.push(data[i][0]);
+                        cantidad.push(data[i][1]);
                         colores.push(colorRGB());
                     }
                     var ctx = document.getElementById('myChart');
@@ -79,7 +79,14 @@
                         data: {
                             labels: titulo,
                             datasets: [{
-                                label: '# of Votes',
+                                label: 'Total',
+                                data: cantidad,
+                                backgroundColor: colores,
+                                borderColor: colores,
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Reprogramados',
                                 data: cantidad,
                                 backgroundColor: colores,
                                 borderColor: colores,
